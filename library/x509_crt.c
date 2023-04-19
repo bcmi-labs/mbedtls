@@ -71,6 +71,8 @@
 #include <sys/stat.h>
 #if defined(__MBED__)
 #include <platform/mbed_retarget.h>
+#elif defined(MBEDTLS_FS_IO_ALT)
+#include <storage_retarget.h>
 #else
 #include <dirent.h>
 #endif /* __MBED__ */
